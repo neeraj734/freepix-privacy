@@ -1,30 +1,264 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Freepix Privacy Policy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PixVally – Privacy Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; }
-    h1 { color: #333; }
-    h2 { color: #555; }
-    p { line-height: 1.6; color: #444; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0d0f;
+      --surface: #141418;
+      --border: rgba(255,255,255,0.07);
+      --accent: #c8a96e;
+      --accent-soft: rgba(200,169,110,0.12);
+      --text: #e8e4dc;
+      --muted: #7a7670;
+      --heading-font: 'DM Serif Display', serif;
+      --body-font: 'DM Sans', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--body-font);
+      font-weight: 300;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    /* Top bar */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 28px 40px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: sticky;
+      top: 0;
+      background: rgba(13,13,15,0.92);
+      backdrop-filter: blur(12px);
+      z-index: 10;
+    }
+
+    .logo-mark {
+      width: 32px; height: 32px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--heading-font);
+      font-size: 16px;
+      color: #0d0d0f;
+    }
+
+    .logo-text {
+      font-family: var(--heading-font);
+      font-size: 20px;
+      color: var(--text);
+      letter-spacing: 0.02em;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 80px 40px 60px;
+      max-width: 760px;
+      margin: 0 auto;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border: 1px solid rgba(200,169,110,0.25);
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      font-family: var(--heading-font);
+      font-size: clamp(36px, 5vw, 52px);
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* Content */
+    .content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 40px 100px;
+    }
+
+    .section {
+      margin-bottom: 48px;
+      padding: 36px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      transition: border-color 0.2s;
+    }
+
+    .section:hover {
+      border-color: rgba(200,169,110,0.2);
+    }
+
+    .section-number {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .section h2 {
+      font-family: var(--heading-font);
+      font-size: 22px;
+      color: var(--text);
+      margin-bottom: 16px;
+      font-weight: 400;
+    }
+
+    .section p {
+      color: #a09b93;
+      font-size: 15px;
+      line-height: 1.85;
+    }
+
+    /* Highlight box */
+    .highlight {
+      background: var(--accent-soft);
+      border: 1px solid rgba(200,169,110,0.2);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-top: 16px;
+      font-size: 14px;
+      color: var(--accent);
+    }
+
+    /* Contact */
+    .contact-link {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(200,169,110,0.3);
+      transition: border-color 0.2s;
+    }
+    .contact-link:hover { border-color: var(--accent); }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 40px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 20px; }
+      .hero { padding: 50px 20px 40px; }
+      .content { padding: 40px 20px 80px; }
+      .section { padding: 24px; }
+      footer { padding: 24px 20px; }
+    }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy for Freepix</h1>
-  <p>Effective date: April 13, 2026</p>
 
-  <p>Freepix is developed by Adhook Media. This privacy policy explains how we handle your data when you use our app.</p>
+  <header>
+    <div class="logo-mark">P</div>
+    <span class="logo-text">PixVally</span>
+  </header>
 
-  <h2>Information We Access</h2>
-  <p>Freepix accesses photos and images stored on your device solely for the purpose of editing. We do not collect, store, or share your photos or any personal data.</p>
+  <div class="hero">
+    <div class="badge">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p>Effective date: April 13, 2026 &nbsp;·&nbsp; Developed by Adhook Media</p>
+  </div>
 
-  <h2>Third Party Services</h2>
-  <p>Freepix uses ClipDrop API for AI-powered features like background removal and image enhancement. Images processed through these features are sent to ClipDrop servers and are not stored permanently.</p>
+  <div class="content">
 
-  <h2>Permissions</h2>
-  <p>The app requests access to your device storage and media to allow you to select and save edited photos. These permissions are used only within the app.</p>
+    <div class="section">
+      <div class="section-number">01</div>
+      <h2>Overview</h2>
+      <p>PixVally is a photo editing application developed by Adhook Media. This privacy policy explains how we handle your information when you use our app. We are committed to protecting your privacy and being transparent about our practices.</p>
+    </div>
 
-  <h2>Contact Us</h2>
-  <p>If you have any questions about this privacy policy, contact us at: neeraj@adhookmedia.com</p>
+    <div class="section">
+      <div class="section-number">02</div>
+      <h2>Information We Access</h2>
+      <p>PixVally accesses photos and images stored on your device solely for the purpose of editing. We do <strong style="color:var(--text)">not</strong> collect, store, or share your photos or any personal data on our servers.</p>
+      <div class="highlight">Your photos stay on your device. We never upload or store your personal images.</div>
+    </div>
+
+    <div class="section">
+      <div class="section-number">03</div>
+      <h2>AI-Powered Features</h2>
+      <p>Some features in PixVally use third-party AI services to process images. When you use these features, the selected image is temporarily sent to the service provider's servers for processing only. Images are not stored permanently by these services and are deleted immediately after processing.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-number">04</div>
+      <h2>Permissions</h2>
+      <p>PixVally requests the following permissions to function properly:</p>
+      <ul style="margin-top:14px; padding-left:20px; color:#a09b93; font-size:15px; line-height:2.2;">
+        <li>Storage / Media access — to let you select and save edited photos</li>
+        <li>Internet access — required for AI-powered editing features only</li>
+      </ul>
+      <p style="margin-top:14px;">These permissions are used strictly within the app and for no other purpose.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-number">05</div>
+      <h2>Data We Do Not Collect</h2>
+      <p>We do not collect, store, or share any of the following:</p>
+      <ul style="margin-top:14px; padding-left:20px; color:#a09b93; font-size:15px; line-height:2.2;">
+        <li>Personal identification information</li>
+        <li>Location data</li>
+        <li>Device identifiers</li>
+        <li>Usage analytics or tracking data</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-number">06</div>
+      <h2>Children's Privacy</h2>
+      <p>PixVally is not directed at children under the age of 13. We do not knowingly collect any personal information from children. If you believe a child has provided personal information, please contact us and we will take steps to remove it.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-number">07</div>
+      <h2>Changes to This Policy</h2>
+      <p>We may update this privacy policy from time to time. Any changes will be posted on this page with an updated effective date. Continued use of the app after changes means you accept the updated policy.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-number">08</div>
+      <h2>Contact Us</h2>
+      <p>If you have any questions or concerns about this privacy policy, feel free to reach out:</p>
+      <p style="margin-top:14px;">
+        <a href="mailto:neeraj@adhookmedia.com" class="contact-link">neeraj@adhookmedia.com</a>
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 Adhook Media · PixVally · All rights reserved
+  </footer>
+
 </body>
 </html>
